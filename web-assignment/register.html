@@ -1,0 +1,74 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<title> Register </title>
+		<link rel="stylesheet" href="general style.css">
+		<script language="javascript" type="text/javascript" src="validations.js"></script>
+		<style>
+			input{
+				border: none;
+				border-bottom: 1px solid #15a7d6;
+				width: 80%;
+				background-color: skyblue;
+			}
+			h3{
+				text-align: center;
+				font-size: 25px;
+			}
+			div{
+				padding-left: 45%;
+			}
+		</style>
+	</head>
+	<body>
+		<table id="maintable">
+			<tr>
+				<td><a href="homepage.html"> Home </a></td>
+				<td><a href="about.html"> About </a></td>
+				<td><a href="register.html"> Register </a></td>
+				<td><a href="alumni.html"> Alumni </a></td>
+				<td><a href="staff.html"> Staff </a></td>
+				<td><a href="contacts.html"> Contacts </a></td>
+			</tr>
+		</table>
+
+		<form method="POST" action="register.php" class="text" id="mainform"  onsubmit="go()">
+			<h3> Registration </h3>
+			<input type="text" id="fname" name="fname" placeholder="First name" required><br>
+			<input type="text" id="mname" name="mname" placeholder="Middle name" required><br>
+			<input type="text" id="sname" name="sname" placeholder="Surname" required><br>
+			<input type="text" id="uname" name="uname" placeholder="Username" required><br>
+			<label>Date of Birth:</label>
+				<input type="date" id="dob" name="dob" value="Date of Birth"  style="width:63.7%;" required><br>
+			<input type="password" pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$" id="pword" name="pword" placeholder="Password" required>
+				<ul>
+					<li>Password should be at least 8 characters long.</li>
+					<li>It should
+contain both alphanumeric characters and special characters.</li>
+				</ul>
+			<label> Curriculum Vitae (CV) </label>
+				<input type="file" id="file" name="file" value="File" required><br>
+			<p> Contacts: <br>
+				<label> Email address: </label>
+					<input type="email" id="email1" name="email1" placeholder="eg: *****@gmail.com" required><br>
+				<label> Mobile number: </label>
+					<input type="text" id="mnumber" name="mnumber1" placeholder="eg: 0744****** " required>
+			</p>
+			
+			<p>Social media accounts: <br>
+				<label>Facebook:</label>
+					<input type="text" id="fbook" name="fbook" placeholder="Facebook username"><br>
+				<label>Twitter:</label>
+					<input type="text" id="twitter" name="twitter" placeholder="Twitter username"><br>
+				<label>Instagram:</label>
+						<input type="text" id="instagram" name="instagram" placeholder="Instagram username"><br>
+			</p>
+
+			<div>
+				<input type="submit" id="sr" value="Submit" onclick="vmnumber()"><br><br>
+				<input type="reset" id="sr" value="Reset" style="background-color: #0066ff;">
+			</div>
+		
+		</form>
+	</body>
+</html>
